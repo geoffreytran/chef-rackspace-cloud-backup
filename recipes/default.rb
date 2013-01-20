@@ -28,6 +28,7 @@ end
 
 template "/etc/apt/sources.list.d/driveclient.list" do
   source "sources.list.erb"
+  mode 0644
   notifies :run, "execute[apt-get update]", :immediately
 end
 
